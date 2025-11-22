@@ -153,6 +153,23 @@ curl http://localhost:8080/api/users/count
 ## 项目结构
 
 ```
+src/main/java/com/example/webfluxdemo/
+├── WebfluxDemoApplication.java      # 主启动类
+├── model/
+│   └── User.java                   # 用户实体类
+├── repository/
+│   └── UserRepository.java          # 数据访问层
+├── service/
+│   └── UserService.java            # 业务逻辑层
+├── controller/
+│   └── UserController.java          # 控制器层
+└── security/
+    └── PasswordUtils.java           # 密码工具类
+
+src/main/resources/
+├── application.yml                  # 应用配置
+└── schema.sql                      # 数据库初始化脚本
+```
 
 ## 核心特性
 
