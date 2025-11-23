@@ -17,8 +17,8 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import jakarta.validation.Valid;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.HashMap;
 
 @Slf4j
 @RestController
@@ -219,7 +219,8 @@ public class UserController {
                     Map<String, Object> response = new HashMap<>();
                     response.put("success", false);
                     response.put("message", "用户不存在");
-                    return Mono.just(ResponseEntity.notFound().build());
+                    return Mono.just(ResponseEntity.ok(response));
+//                    return Mono.just(ResponseEntity.notFound().build());
                 }));
     }
 
@@ -288,4 +289,5 @@ public class UserController {
                     return ResponseEntity.ok(response);
                 });
     }
-}
+
+    }
